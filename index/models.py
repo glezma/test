@@ -6,15 +6,17 @@ from django.utils import timezone
 
 # Create your models here.
 class SignUp(models.Model):
-    email_signup = models.EmailField(max_length = 200)
-    first_name = models.CharField(max_length = 200)
-    last_name = models.CharField(max_length = 300)
-    password = models.CharField(max_length = 20)
+    """ sign up model """
+    email_signup = models.EmailField(max_length=200)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=300)
+    password = models.CharField(max_length=20)
 
     def __str__(self):
         return self.email_signup + ' - ' + self.first_name
 #
 class LogIn(models.Model):
+    """ Login model """
     email_login = models.ForeignKey(SignUp, on_delete=models.CASCADE)
     date_login = models.DateTimeField()
     def __str__(self):

@@ -18,9 +18,8 @@ from django.contrib import admin
 from . import views
 app_name = 'index'
 urlpatterns = [
-url(r'^$', views.UserFormView.as_view(), name='p_index'),
-url(r'^home/$', views.traininghub, name='p_home'),
-url(r'^logout/$', views.logout_user, name='p_logout'),
-url(r'^cheat_sheet/$', views.cheatsheet, name='p_cheatsheet')
+    url(r'^$', views.UserFormView.as_view(), name='p_index'),
+    url(r'^home/$', views.traininghub, name='p_home'),
+    url(r'^logout/$', views.logout_user, name='p_logout'),
+    url(r'^cheat_sheet/$', views.cheatsheet, name='p_cheatsheet')
 ]
-# url(r'^$', views.index, name='index'),
