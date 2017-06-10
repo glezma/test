@@ -1,0 +1,330 @@
+<html>
+	
+	<head>
+		{% load static %}
+		<title>Learning Hub</title>
+		<!--<link rel="stylesheet" href="static/css/styleth.css">-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static "index/css/styleth.css" %}">
+		
+
+	</head>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-89407091-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+<body>
+	<header>
+		<h1>Learning Hub</h1>
+		
+		<!--<nav>
+			<ul >
+				<li class="menubar"> <a href="training_hub">Home</a> </li>
+				<li class="menubar"> <a href="cheat_sheet">Cheatsheets</a> </li>
+				<li class="menubar"> <a href="logout">Logout</a>  </li>
+			</ul>
+		</nav>-->
+
+		<nav class="navbar navbar-inverse">
+			 <div class="container">
+			<ul class="nav navbar-nav">
+				<li class="active" > <a href="{% url 'index:p_home' %}">Home</a> </li>
+				<li > <a href="{% url 'index:p_cheatsheet' %}">Cheatsheets</a> </li>
+				<li > <a href="{% url 'index:p_logout' %}">Logout</a>  </li>
+
+			</ul>
+			<p class="navbar-text navbar-right">User {{user.username}}</p>
+			</div>
+			
+		</nav>
+
+		<!--<div class="usuario">User: {{username}}</div>-->
+	</header>	
+	<h2>Tools</h2>
+	<ul>
+		<li>Homebrew for Mac: Package manager for Mac <a href="http://brew.sh/">http://brew.sh/</a></li>
+		<li>Vim (text editor)<a href="http://www.vim.org/">http://www.vim.org/</a> or install it from Homebrew ($brew install vim) </li>
+		<li>Vim and Tmux tutorial <a href="https://www.youtube.com/embed/5r6yzFEXajQ">video</a></li>
+		<!--<div class="video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5r6yzFEXajQ" frameborder="0" allowfullscreen></iframe>
+		</div>-->
+		<li>Text Editor: Sublime <a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a> 
+		<!--<a href="sublime">Sublime license</a>-->
+		</li>
+		<li> <a href="https://code.visualstudio.com/">Microsoft Code</a>  </li>
+		<li>Git: <a href="https://git-scm.com/">https://git-scm.com/</a>  <span>[INDISPENSABLE]</span></li>
+		<li>Github: <a href="https://github.com/">https://github.com/</a>  <span>[INDISPENSABLE]</span>
+			Gonzalo s account: <a href="https://github.com/glezma">https://github.com/glezma</a>	</li>
+		<li>Python distribution: <a href="www.python.org">www.python.org</a> <span>[INDISPENSABLE]</span></li>
+		<li>Heroku toolbelt <a href="https://toolbelt.heroku.com/">https://toolbelt.heroku.com/</a></li>
+		<li>Slack <a href="https://slack.com/">https://slack.com/</a></li>
+
+	</ul>
+<h3>Git and Github</h3>
+<ul>
+		<li>
+			Github Tutorial For Beginners - Source Control Basics by LearnCode.academy
+			<span>[INDISPENSABLE]</span>
+			<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/0fKg7e37bQE" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</li>
+		<li>
+			GITHUB PULL REQUEST, Branching, Merging, Team Workflow by LearnCode.academy
+			<span>[INDISPENSABLE]</span>
+			<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/oFYyTZwMyAg" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</li>
+		<li>
+			Tools for Entrepreneurs: Getting Started with GitHub + Git by Google for Entrepreneurs 
+			<a href="https://www.youtube.com/watch?v=DVDLoe_2MBc">Link</a>
+			<!--<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/DVDLoe_2MBc" frameborder="0" allowfullscreen>
+				
+			</iframe></div>-->
+		</li>
+	</ul>	
+<h2>Front-End Tutorials</h2>
+
+<h3>HTML and CSS</h3>
+<ul>
+	<li> Ultra fast tutorials, excelent for a quick catch up on Html and CSS by
+		<a href="https://www.youtube.com/playlist?list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc">Learn Code Academy </a>
+		<span>[INDISPENSABLE]</span>
+	</li>
+		<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLPMQXCp5pRwHDTI2DgvInNTxzX-TKhFtj" frameborder="0" allowfullscreen></iframe>
+		</div>
+	<li>Long but comprehensive example project to consolidate HTML and CSS knowledge
+		<a href="https://www.youtube.com/watch?v=Wm6CUkswsNw">Website With Responsive Layout</a>
+		<!--<span>[INDISPENSABLE]</span>-->
+	</li>
+	<li>
+		30 Days to Learn HTML & CSS (Full Course) 
+		<a href="https://www.youtube.com/playlist?list=PLgGbWId6zgaWZkPFI4Sc9QXDmmOWa1v5F">
+			Link</a> -- Type: youtube course
+	</li>
+</ul>
+<h3>JavaScript</h3>
+<ul>
+
+	<li> Best JavaScript tutorial ever by Learn Code Academy 
+		<span>[INDISPENSABLE]</span>
+		<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLoYCgNOIyGACTDHuZtn0qoBdpzV9c327V" frameborder="0" allowfullscreen></iframe>		</div>
+	</li>
+	<li> Best jQuery and jQuery Ajax tutorial by Learn Code Academy 
+		<span>[INDISPENSABLE]</span>
+		<div class="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLoYCgNOIyGABdI2V8I_SWo22tFpgh2s6_" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</li>
+	<li>Angular JS <span> [INDISPENSABLE]</span></li>
+	
+	<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLPMQXCp5pRwGt2V1VPf1BxckXM6agUH03" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<li>
+		Mozilla Developer Network 
+		<a href="https://developer.mozilla.org/en-US/">
+			Link</a>
+	</li>
+	<li>
+		Intro to D3 
+		<a href="https://github.com/curran/screencasts/tree/gh-pages/introToD3">
+			Link</a>
+	</li>
+</ul>
+<h2>Back-End Tutorials</h2>
+<h3>Django</h3>
+<ul>
+	<li>Django by The New Boston <span>[INDISPENSABLE]</span></li>
+		<div class="video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK" frameborder="0" allowfullscreen></iframe>
+		</div>
+</ul>
+<h3>Flask</h3>
+<ul>
+	<li> Pycon - Miguel Gringberg: Basic/Intermediate level Flask Workshop
+	<a href="https://www.youtube.com/watch?v=DIcpEg77gdE"> Link</a>
+	</li>
+	<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/DIcpEg77gdE" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+<li>Intro to Flask: Free basic Flask course|Michael Herman|Too slow but the DB videos where escencial to build this site.
+<a href="https://www.youtube.com/channel/UCt7yOnL7bI7yCa1Xe_GTjJQ">
+	Link
+</a>
+	</li>
+	<li>Youtube channel: Discover Flask--> 
+<a href="https://www.youtube.com/playlist?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM">Link</a>
+	<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/WfpFUmV1d0w?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe>
+	</div>
+<ul>
+	<li>Hello World </a>	</li>
+
+	<li>Template inheritance
+		<a href="https://www.youtube.com/watch?v=hNzruwVPtCE&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM&index=4">Link</a>
+<!-- <div><iframe width="560" height="315" src="https://www.youtube.com/embed/hNzruwVPtCE?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe></div> -->
+	</li>
+	<li>
+		Database
+		<a href="https://www.youtube.com/watch?v=_vrAjAHhUsA&index=5&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM">Link</a>
+<!-- 		<div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/_vrAjAHhUsA?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe>
+		</div> -->
+	</li>
+	<li>
+		SQLAlchemy
+		<a href="https://www.youtube.com/watch?v=kuyrL6krkwA&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM&index=8">Link</a>
+<!-- 		<div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/kuyrL6krkwA?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe>
+		</div> -->
+	</li>
+	<li>
+		Heroku Deployment
+		<a href="https://www.youtube.com/watch?v=L9uD74nHvFY">Link</a>
+<!-- 		<div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/L9uD74nHvFY?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe>
+		</div> -->
+	</li>
+	<li>PostGRES 
+		<a href="https://www.youtube.com/watch?v=FD0p-opdyoE&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM&index=13">Link</a>
+<!-- 		<div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FD0p-opdyoE?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM" frameborder="0" allowfullscreen></iframe>		</div> -->
+	</li>
+
+</ul>
+
+</ul>
+<h3>Node.js</h3>
+<ul>
+	<li> Node.js by LearnCode Academy</li>
+	<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLoYCgNOIyGAACzU6GliHJDp4kmOw3NFsh" frameborder="0" allowfullscreen></iframe>
+	</div>
+</ul>
+
+
+<h2> Complete courses and certifications</h2>
+
+<ul>
+	<li>
+			Udemy : The Complete Web Developer Course 2.0  @ (10$)
+		<a href="https://www.udemy.com/the-complete-web-developer-course-2/">
+			Link</a>		
+	</li>
+
+		<li>
+			Udemy (by AWS, Github, at&t, Google) : Full Stack Web Developer Nanodegree @ (199$/month)
+		<a href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004">
+			Link</a>
+		</li>
+
+		<li>
+			Udemy (by at&t, Google, Github, Hack Reactor) : Front-End Web Developer Nanodegree @ (199$/month)
+		<a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">
+			Link</a>
+		</li>
+
+
+</ul>
+
+
+<h2>Books and Github educational repositories</h2>
+<ul>
+	<li>Miguel GringBerg Books and videos 
+	<a href="http://flaskbook.com/">Link</a>
+
+	</li>
+	<li>Miguel Gringberg Github 
+		<a href="https://github.com/miguelgrinberg/oreilly-intro-to-flask-video">Intro to flask videos</a>
+	</li>
+	<li>Miguel Gringberg Github
+		<a href="https://github.com/miguelgrinberg/flasky">Flasky</a>
+	</li>
+
+</ul>
+
+<h2>Theoretical Miscelania</h2>
+<h3>Model View Controler Logic</h3>
+
+<ul>
+	<li>
+		<a href="https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/">
+		       	MVC explained with legos </a>
+		<span>[INDISPENSABLE]</span>
+	</li>
+</ul>
+
+
+<h3> Miscelania (HTTP, PHP, MVC XML, SQL, AJAX, Security, Scalability)</h3>
+<ul>
+	<li>
+		Harvard CS75 course: 
+		<a href="https://www.youtube.com/playlist?list=PLSlcu3sMjsc9QoiHpdEWF246A4eVCjBUQ">
+			CS75 Youtube videos</a> <br> 
+			
+		CS75: Source files and projects
+		<a href="http://cs75.tv/">
+			http://cs75.tv/</a>
+
+	</li>
+
+			<div class="video">
+				
+			</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8KuO4r5CHjM?list=PLSlcu3sMjsc9QoiHpdEWF246A4eVCjBUQ" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+
+
+
+
+	<li>
+		Harvard E164 Mobile Software Engineering course (JavaScript, Node): 
+		<a href="https://www.youtube.com/playlist?list=PLuhjguFxSeVLKwknVvGlBrskgQoti23ga">
+			E164 Youtube videos</a> <br>
+			
+		E164: Source files and projects
+		<a href="http://cs164.tv/">
+			http://cs164.tv/</a>
+
+	</li>
+
+			<div class= "video">
+				
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/K1EeEps-zXc?list=PLuhjguFxSeVLKwknVvGlBrskgQoti23ga" frameborder="0" allowfullscreen></iframe>
+
+			</div>
+
+
+</ul>
+
+<h3> Machine Learning</h3>
+<ul>
+
+		<li>
+			Incredibly quick and well presented tutorial (by Welch Labs): Neural Networks Demystified |(free)
+		<a href="https://www.youtube.com/watch?v=bxe2T-V8XRs&list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU">
+			Link</a>
+		</li>
+			<div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/bxe2T-V8XRs?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU" frameborder="0" allowfullscreen></iframe>
+			</div>
+		<li>
+			Udacity (by Google) free course : Deep learning |(free)
+		<a href="https://www.udacity.com/course/deep-learning--ud730">
+			Link</a>
+		</li>
+
+</ul>
+
+</body>
+</html>

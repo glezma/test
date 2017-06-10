@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+			{% load static %}
+		<title>Learning Hub</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static "index/css/styleth.css" %}">
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89407091-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<body>
+	<header>
+		<h1>Learning Hub</h1>
+		
+		<!--<nav>
+			<ul >
+				<li class="menubar"> <a href="training_hub">Home</a> </li>
+				<li class="menubar"> <a href="cheat_sheet">Cheatsheets</a> </li>
+				<li class="menubar"> <a href="logout">Logout</a>  </li>
+			</ul>
+		</nav>
+		<div class="usuario">Usuario: {{username}}  </div>
+
+		-->
+
+			<nav class="navbar navbar-inverse">
+			 <div class="container">
+			<ul class="nav navbar-nav">
+				<li > <a href="{% url 'index:p_home' %}">Home</a> </li>
+				<li class="active"> <a href="{% url 'index:p_cheatsheet' %}">Cheatsheets</a> </li>
+				<li > <a href="{% url 'index:p_logout' %}">Logout</a>  </li>
+
+			</ul>
+			<p class="navbar-text navbar-right">User {{user.username}}</p>
+			</div>
+			
+		</nav>
+	</header>	
+<h2>Git Commands</h2>
+<div class="codeblock">
+	Initiate .git 
+<div class="code"> git init </div>
+<div class="code"> git config --list </div>
+
+Add changes to the local base
+
+<div class="code">git add --all</div>
+
+Commit changes to the local repository adding a compulsory tag
+<div class="code">git commit -am "This is a change" </div>
+
+Verify to which remote git repository I am connected
+<div class="code">git remote -v </div>
+Push local commited content to the master branch of the remote origin of name 'origin_name'
+<div class="code">git push origin_name master </div>
+</div>
+<h2>Heroku Commands</h2>
+<div class="codeblock" >
+It is a one off command, after the first execution it keeps logged in
+<div class="code">heroku login </div>
+
+Creates an app with name training-hub 
+<div class="code">heroku create training-hub </div>
+
+Clone the .git from heroku repostoty called "training-hub"
+<div class="code">heroku git:clone -a training-hub </div>
+
+Connecting remotely with project dry-adlands-897 (you must be inside the folder containing the .git file)
+<div class="code">heroku git:remote -a dry-adlands-8976 </div>
+
+Deploy to heroku server
+<div class="code">git push heroku master </div>
+Open the heroku app to which we are connected
+<div class="code">heroku open </div>
+
+More Heroku commands
+<div class="code">heroku addons </div>
+
+Create a heroku postgress addon and attach it to the app
+<div class="code">heroku addons:create heroku-postgresql:hobby-dev </div>
+<div class="code"> addons:create heroku-postgresql:<PLANNAME> </div>
+
+Esperar que la base de datos aparezca online
+<div class="code">heroku pg:wait </div>
+
+Ver las variables de configuracion de heroku
+<div class="code">heroku config </div>
+</div>
+<h2>Native Python- Pip and Virtual Environment</h2>
+<div class = "codeblock">
+
+Create a virtual env
+<div class="code">cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME </div>
+
+Activate an environment
+<div class="code">source $ENV_BASE_DIR/$ENVIRONMENT_NAME/bin/activate</div>
+
+Deactivate current virtual env
+<div class="code">deactivate</div>
+
+Instalation of a python module
+<div class="code">pip install $PACKAGE_NAME</div>
+
+See the installed modules 
+<div class="code">pip freeze</div>
+
+Generates a txt with a list of installated modules
+<div class="code">pip freeze > requirements.txt</div>
+
+Install several python modules from txt list created by pip freeze
+<div class="code">pip install -r requirements.txt</div>
+</div>
+<h2>Conda</h2>
+<div class ="codeblock">
+	Create a virtual env (--file req.txt opcional). Los venv se generan en la carpeta de anaconda (e.g. C:\Anaconda3\envs)
+	<div class="code">conda create -n name_environment --file req.txt</div>
+	conda create -n py33 python=3.3 anaconda
+
+	Activate an environment
+	<div class="code">activate name_environment</div>
+
+	Deactivate current virtual env
+	<div class="code">deactivate</div>
+
+	Instalacion de un modulo python se puede instalar con pip (conda registra los modulos) si no esta en conda buscar en https://conda.anaconda.org/binstar
+	<div class="code">conda install $PACKAGE_NAME</div>
+
+	Ver los modulos instalados 
+	<div class="code">conda list</div>
+	Generacion de txt con los modulos instalados en el venv actual
+	<div class="code">conda list -e > req.txt</div>
+	Instalacion de varios modulos python en un txt
+	<div class="code">nunca usado</div>
+</div>
+
+<h2>Environment variables</h2>
+<div class ="codeblock">
+	Create a temporal environment variable in Mac
+	<div class="code">export APP_SETTINGS="config.DevelopmentConfig"</div>
+	<div class="code">export DATABASE_URL="postgresql://localhost/database"</div>
+	Create a permanent environment variable in Mac (add the following to ~/.bash_profile) 
+	<div class="code">export APP_SETTINGS=config.DevelopmentConfig</div>
+	<div class="code">export DATABASE_URL=postgresql://localhost/database</div>
+	Format for postgress URL
+	<div class="code">	postgres://gkdpsxdewddoqc:sEAz2-G7h64myUrxqAHzhCltle@ec2-54-197-241-239.compute-1.amazonaws.com:5432/d7s0v25a53k5rt
+</div>
+	<div class="code">postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]</div>
+	
+</div>
+
+<h2>SqlAlchemie</h2>
+<div class ="codeblock">
+	Get database class BlogPost from remote heroku server (models.py contains sqlalchemie schema for BlogPost)
+	<div class="code"> heroku run python</div>
+	<div class="code"> from models import BlogPost</div>
+	Query record number 2 from fields password and email from database BlogPost.
+	<div class="code">[BlogPost.query.all()[2].password ,BlogPost.query.all()[2].email]</div>
+</div>
+
+
+	</body>
+</html>
